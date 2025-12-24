@@ -9,7 +9,7 @@ fn main() {
         println!("Value inside the lock: {}", *data);
     });
 
+    handle.join().ok();
     // let final_data = treasure_chest.lock().unwrap(); // value borrowed here after move
     // println!("Final value: {}", *final_data);
-    handle.join().ok();
 }
