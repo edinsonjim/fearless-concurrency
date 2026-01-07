@@ -5,7 +5,7 @@ impl Future for FetchCompany {
 
     fn poll(
         self: std::pin::Pin<&mut Self>,
-        cx: &mut std::task::Context<'_>,
+        _cx: &mut std::task::Context<'_>,
     ) -> std::task::Poll<Self::Output> {
         std::task::Poll::Pending
     }

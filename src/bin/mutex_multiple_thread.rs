@@ -1,6 +1,5 @@
 use std::sync::{Arc, Mutex};
 use std::thread;
-use std::time::Duration;
 
 fn main() {
     // Protect data with Mutex, wrap Mutex with Arc to share ownership
