@@ -1,5 +1,5 @@
 use std::sync::mpsc::{self, Receiver, Sender};
-use std::thread;
+use std::thread::{self};
 
 fn main() {
     // Create a channel
@@ -8,7 +8,7 @@ fn main() {
     // Spawn thread and move transmitter (tx) into it
     thread::spawn(move || {
         let val = String::from("hi from thread");
-        tx.send(val).unwrap();
+        tx.send(val).unwrap(); // TODO(ej): if you want to block the receiver comment this
         // val is moved. We can't use it here anymore.
     });
 
